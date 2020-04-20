@@ -1,14 +1,18 @@
 const express = require('express')
 const graphqlHTTP = require('express-graphql')
 const schema = require('../schema/schema')
-const mongoose = require('mongoose');
-require('dotenv').config();
-const cors = require('cors');
+const mongoose = require('mongoose')
+require('dotenv').config()
+const cors = require('cors')
 
 const app = express()
-const PORT = 3005
+const PORT = process.env.PORT || 3005
 
-mongoose.connect(`mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.MLAB_URL}`, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(`mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.MLAB_URL}`, { 
+  useNewUrlParser: true, 
+  useUnifiedTopology: true, 
+  useFindAndModify: false, 
+});
 
 app.use(cors());
 

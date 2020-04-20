@@ -1,0 +1,25 @@
+{
+  "name": "graphql-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && yarn start",
+    "server": "cd server && yarn dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webuxmotion/graphql-tutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webuxmotion/graphql-tutorial/issues"
+  },
+  "homepage": "https://github.com/webuxmotion/graphql-tutorial#readme",
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  }
+}
